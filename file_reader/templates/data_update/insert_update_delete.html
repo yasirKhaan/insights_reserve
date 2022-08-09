@@ -1,0 +1,38 @@
+<form enctype="multipart/form-data" method="post" action="." class="slide">
+    {% csrf_token %}
+    <h1>Update, Insert Or Delete Data</h1>
+    <ul>
+        <li>
+            <p>Note: your query must contain respective schema name which you mentioned while connection your data sources.</p>
+        </li>            
+        <li>
+            <p>Note: your query must not contain any reserved word.</p>
+        </li>
+    </ul>
+    
+    <p><label for="get_cud">SQL Update, Insert or Delete Query:</label></p>
+    <textarea id="get_cud" name="get_cud" rows="10" cols="100"></textarea>       
+    <br>
+    <br>
+    
+    <button type="submit">Upload File</button>
+    <h2>Query Examples</h2>
+    <h3>INSERT: </h3>
+    <p>INSERT INTO (schema_name).(table_name) VALUES('value1', 'value2', 'value3');</p>
+    
+    <h3>UPDATE: </h3>
+    <p>UPDATE (schema_name).(table_name)
+        SET column_name1='column_value1', column_name2='column_value2'
+        WHERE column_value='value';</p>
+        
+    <h3>DELETE: </h3>
+    <p>DELETE FROM (schema_name).(table_name) WHERE column_value='value';</p>
+</form>
+
+<!-- INSERT INTO new_csv.csv_table VALUES('2021', 'YS', 'TF', 'DS', '00', 'PKR', '0.01', 'ED', '0', 'ED', 'Y');
+
+UPDATE new_csv.csv_table 
+SET experience_level='Alfred Schmidt', employment_type='Frankfurt'
+WHERE company_size='Y';
+
+DELETE FROM new_csv.csv_table WHERE company_size='Y'; -->

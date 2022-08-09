@@ -1,0 +1,28 @@
+<form enctype="multipart/form-data" method="post" action="." class="slide">
+    {% csrf_token %}
+    <h1>Delete Table or Schema</h1>
+    <ul>
+        <li>
+            <p><b>Note:</b> For better and error free result, it will be good to mention schema_name before table name (For Table Deletion).</p>
+        </li>            
+        <li>
+            <p><b>Note:</b> Before deleting Schema, Keep in mind that the schema must not be associated with any table.</p>
+        </li>            
+        <li>
+            <p><b>Note:</b> Before deleting Tables, Keep in mind about the connections between tables to avoid any error.</p>
+        </li>
+    </ul>
+
+    <p<label for="table__or_schema_delete">Table or Schema Deletion Query:</label></p>
+    <textarea id="table__or_schema_delete" name="table__or_schema_delete" rows="10" cols="100"></textarea>       
+    <br>
+    <br>
+    
+    <button type="submit">Upload File</button>
+
+    <h3>DELETING SCHEMA: </h3>
+    <p>DROP SCHEMA IF EXISTS schema_name;</p>
+
+    <h3>DELETING TABLE: </h3>
+    <p>DROP TABLE IF EXISTS table_name;</p>
+</form>

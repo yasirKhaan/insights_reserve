@@ -1,0 +1,11 @@
+<form enctype="multipart/form-data" method="post" action="." class="slide">
+    {% csrf_token %}
+    <h1>Schema Transfer </h1>
+    <label for="old_schema">Old Schema:</label>
+    <input type="text" id="old_schema" name="old_schema" value="None"><br><br>
+    
+    <label for="new_schema">New Schema:</label>
+    <input type="text" id="new_schema" name="new_schema" value="None"><br><br>
+    
+    <button type="submit">Upload File</button>
+</form>
